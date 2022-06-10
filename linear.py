@@ -33,15 +33,16 @@ def multiply_intermediate(m, n):
     return retVal
 
 
-
+# parameters: input matrix "input"
+# returns: tranpose of input matrix
 def transpose(input):
     num_rows = len(input)
     num_cols = len(input[0])
-    x = []
-    for i in range(num_cols):
-        x += [[input[m][i] for m in range(num_rows)]]
+    tranposed_matrix = []
+    for col_num in range(num_cols):
+        tranposed_matrix += [[input[row_num][col_num] for row_num in range(num_rows)]]
 
-    return x
+    return tranposed_matrix
 
 
 def guassian_elim()
