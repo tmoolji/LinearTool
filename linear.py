@@ -21,3 +21,13 @@ def multiply(m, n):
 
 
 def multiply_intermediate(m, n):
+    retVal = [""] * len(m) * len(n[0])
+
+    for i in range(len(m)):
+        for j in range(len(n[0])):
+            sums = "R" + str(i) + " C"+ str(j) +":"
+            toAdd = ""
+            for x in range(len(m[0])):
+                toAdd += " + (" + str(m[i][x]) + " * " + str(n[x][j]) + ")"
+            retVal[i*len(m) + j] = sums + toAdd[2:]
+    return retVal
