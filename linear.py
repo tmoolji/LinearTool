@@ -33,7 +33,7 @@ def multiply_intermediate(m, n):
     return retVal
 
 
-# parameters: input matrix "input"
+# parameters: input matrix, "input"
 # returns: tranpose of input matrix
 def transpose(input):
     num_rows = len(input)
