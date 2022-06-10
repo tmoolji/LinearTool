@@ -45,4 +45,5 @@ def transpose(input):
     return tranposed_matrix
 
 
-def guassian_elim()
+def guassian_elim():
+    
