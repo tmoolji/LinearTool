@@ -1,5 +1,7 @@
-#Linear Tool
+# Linear Tool
 
+# parameters: size, n
+# returns: an identity matrix of size n
 def identity(n):
     retVal = [[0] * n for _ in range(n)]
     for i in range(n):
@@ -7,6 +9,9 @@ def identity(n):
     return retVal
 
 
+# parameters: two matricies m, n to be multiplied.
+# returns: the result of multipling m and n
+# Must be the case that len(m[0]) == len(n)
 def multiply(m, n):
     retVal = [[0] * len(m) for _ in range(len(n[0]))]
 
@@ -19,7 +24,9 @@ def multiply(m, n):
 
     return retVal
 
-
+# parameters: two matricies m, n to be multiplied.
+# returns: a 1D array that lists the sums in each cell
+# Must be the case that len(m[0]) == len(n)
 def multiply_intermediate(m, n):
     retVal = [""] * len(m) * len(n[0])
 
@@ -46,4 +53,9 @@ def transpose(input):
 
 
 def guassian_elim():
-    
+
+
+def gaussian_elim_down(input, n):
+    for i in range(n+1, len(input)):
+        divisor = input[n][n] / 
+        for j in range (n, len(input[0])):
