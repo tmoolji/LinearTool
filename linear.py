@@ -51,11 +51,36 @@ def transpose(input):
 
     return tranposed_matrix
 
+# parameters: input matrix, "input"
+#            row to be added, "n"
+#            row you are adding to, and storing new values in, "m"
+#            scalar that each element in n is multiplied by before adding to m, "scalar"
+# returns: modified input array
+def add_row(input, n, m, scalar):
+    for i in range(len(input[0])):
+        input[m][i] += scalar*input[n][i]
+
+    return input
+
+
+
+def gaussian_elim_down(input, solution, n):
+    for i in range(n+1, len(input)):
+        divisor = input[n][n] /
+        for j in range (n, len(input[0])):
+
+# parameters: input matrix in row echelon form back substituted from len-1 to n, "input"
+#             solution matrix in row echelon form back substituted from len-1 to n, "output"
+#             row to be added, "n"
+# returns: modified input and output such that they are in row echelon form back substituted from len-1 to n-1
+def gaussian_elim_up(input, output, n):
+    for i in range(len(input)-1, n-2):
+        scalar = input[n-1][i]/input[i][i]
+        input = add_row(input, i, n-1, scalar)
+        output = add_row(output, i, n-1, scalar)
+
+    return input, output
+
+
 
 def guassian_elim():
-
-
-def gaussian_elim_down(input, n):
-    for i in range(n+1, len(input)):
-        divisor = input[n][n] / 
-        for j in range (n, len(input[0])):
